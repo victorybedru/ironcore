@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+    <section class="header">
+        <div class="gymLogo">
+            <li><a href="index.html">Iron <span class="red">Core</span></a></li>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="pages">
+            <ul class="lists">
+                <li><a href="about.html">About</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="trainers.html">Trainers</a></li>
+                <li><a href="trainers.html#transformations">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>   
+            </ul>
+        </div>
+    </section>
+</header>
+</section> 
+
+<section class="contactUs">
+    <div class="abt">
+        <a href="about.html">About IronCore Gym</a>
+    </div>
+    <div class="message">
+        <p><span class="largeText">Hi, We're local gym in Kries, Zürich. </span> <br> <br>This isn't just a gym. It's the dream of Yaya, a lifelong athlete and coach who believed fitness should be empowering, accessible, and transformative for everyone. Fueled by a passion to help people take control of their health and happiness, Yaya built this space as a sanctuary for growth. Every piece of equipment, every class, and every smile is a part of that promise: to help you become the strongest, healthiest version of yourself.</p>
+
+
+    </div>
+
+</section>
+<section class="enrollment-section">
+    <div class="enrollment-container">
+        <!-- Photo Side -->
+        <div class="enrollment-photo">
+            <img src="Images/contact.jpg" alt="Our Gym Training Session">
+        </div>
+        
+        <!-- Form Side -->
+        <div class="enrollment-form">
+            <h2>Take the next step</h2>
+            <p class="form-subtitle">Don't wait a day longer!</p>
+            
+            <form class="contact-form">
+                <!-- Personal Info -->
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" min="16" max="80" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <!-- Session Selection -->
+                <div class="form-group">
+                    <label for="session">Preferred Training Session *</label>
+                    <select id="session" name="session" required>
+                        <option value="">Select a session</option>
+                        <option value="personal-training">Personal Training</option>
+                        <option value="group-fitness">Group Fitness</option>
+                        <option value="boxing">Boxing Zone</option>
+                        <option value="hiit">HIIT Classes</option>
+                        <option value="yoga">Yoga & Mobility</option>
+                        <option value="strength">Strength Training</option>
+                    </select>
+                </div>
+                
+                <!-- Membership Level -->
+                <div class="form-group">
+                    <label>Membership Level *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="membership" value="basic" required>
+                            <span>Basic (Gym Access)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="membership" value="premium">
+                            <span>Premium (Gym + Classes)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="membership" value="vip">
+                            <span>VIP (All Access + Trainer)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- How did you hear about us -->
+                <div class="form-group">
+                    <label for="referral">How did you hear about us? *</label>
+                    <select id="referral" name="referral" required>
+                        <option value="">Select an option</option>
+                        <option value="social-media">Social Media</option>
+                        <option value="friend">Friend Referral</option>
+                        <option value="google">Google Search</option>
+                        <option value="walk-by">Walked By</option>
+                        <option value="flyer">Flyer/Poster</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div> 
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Join Now</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="office-section">
+    <div class="office-container">
+        <!-- Google Maps -->
+        <div class="map-container">
+            <h2>Find Us in Zürich</h2>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.234567890123!2d8.5365!3d47.3769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa0b84b5c47a5%3A0x4a57c75e35c149d5!2sZ%C3%BCrich%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1234567890123!5m2!1sen!2sch" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+        <!-- Office Details -->
+        <div class="office-details">
+            <h2>Main Office</h2>
+            <div class="office-info">
+                <div class="info-item">
+                    <h3>📍 Address</h3>
+                    <p>Fitnessstrasse 45<br>Kreis 5, Zürich West<br>8005 Zürich, Switzerland</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>🕒 Opening Hours</h3>
+                    <p>Monday - Friday: 5:00 AM - 11:00 PM<br>
+                       Saturday - Sunday: 6:00 AM - 10:00 PM<br>
+                       <em>24/7 access for Premium & VIP members</em></p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>📞 Contact</h3>
+                    <p>Phone: +41 44 123 45 67<br>
+                       Email: zurich@ironcore.com<br>
+                       Emergency: +41 76 123 45 67</p>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-section">
+            <div class="footer-logo">
+                <h3>Iron <span class="red">Core</span></h3>
+            </div>
+            <p class="footer-description">
+                Transform your body, strengthen your mind. Join the IronCore community and unlock your full potential.
+            </p>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <img src="Images/insta1.jpg" alt="Instagram">
+                </a>
+                <a href="#" class="social-link">
+                    <img src="Images/tiktok.jpg" alt="TikTok">
+                </a>
+                <a href="#" class="social-link">
+                    <img src="Images/youtube2.jpg" alt="YouTube">
+                </a>
+                <a href="#" class="social-link">
+                    <img src="Images/x1.jpg" alt="Twitter">
+                </a>
+            </div>
+        </div>
+        <!-- Services -->
+        <div class="footer-section">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+                <li><a href="#">Personal Training</a></li>
+                <li><a href="#">Group Classes</a></li>
+                <li><a href="#">Nutrition Plans</a></li>
+                <li><a href="#">Strength Training</a></li>
+                <li><a href="#">Cardio Programs</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>123 Kries 5, Zurich</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>info@ironcore.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <span>Open 24/7</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-section">
+            <h4>Stay Updated</h4>
+            <p class="newsletter-text">Get the latest fitness tips and exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="newsletter-input">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-container">
+            <p>&copy; 2024 IronCore Fitness. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer> 
+</body>
+</html>

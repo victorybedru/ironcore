@@ -44,6 +44,7 @@ h1 {
 
 h2 {
     margin-bottom: 3rem;
+    margin-top:3rem;
     color: var(--primary-red);
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     text-transform: uppercase;
@@ -2176,82 +2177,70 @@ body.menu-open {
     transform: translateY(-2px);
 }
 
-/* Footer Bottom */
+.footer {
+    width: 100vw; /* Full viewport width */
+    margin: 0;
+    padding: 0;
+    background: #111111;
+    color: #ffffff;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
 .footer-bottom {
-    background: var(--black);
-    border-top: 1px solid #333;
-    padding: 2rem 0;
+    width: 100vw;
+    background: #000000;
+    border-top: 1px solid #333333;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .footer-bottom-container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 15px;
 }
-
-.footer-bottom p {
-    color: var(--gray);
-    font-size: 0.9rem;
-}
-
-.footer-bottom-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-bottom-links a {
-    color: var(--gray);
+.footer-bottom-links a{
+    color:white;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: var(--transition);
 }
-
-.footer-bottom-links a:hover {
-    color: var(--primary-red);
+.footer-bottom-links a:hover{
+    color:red;
+    transform: scale(1.05);
 }
 
 /* Responsive Footer */
 @media (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 3rem 1rem;
+        gap: 30px;
+        padding: 40px 20px;
     }
     
     .footer-bottom-container {
         flex-direction: column;
         text-align: center;
-    }
-    
-    .footer-bottom-links {
-        gap: 1rem;
-    }
-    
-    .newsletter-form {
-        flex-direction: column;
-    }
-    
-    .newsletter-input {
-        min-width: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-container {
-        padding: 2rem 1rem;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-    
-    .footer-bottom {
-        padding: 1.5rem 0;
+        gap: 10px;
     }
 }
 
@@ -2265,4 +2254,713 @@ body.menu-open {
 .footer-section.show {
     opacity: 1;
     transform: translateY(0);
+}
+/*Contact Page*/
+
+/* ContactUs Section */
+.contactUs {
+    background: url("Images/contactbgd.jpg") center/cover no-repeat fixed;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contactUs::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.contactUs > * {
+    position: relative;
+    z-index: 2;
+}
+
+.abt {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.abt a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.abt a:hover {
+    color: #ffffff;
+}
+
+.message {
+    max-width: 800px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.largeText {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.message p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== RESPONSIVE FIXES ===== */
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+    .contactUs {
+        background-attachment: scroll; 
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 20px 60px; 
+    }
+    
+    .largeText {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .message p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    
+    .abt {
+        top: 20px;
+        left: 20px;
+    }
+    
+    .abt a {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Phones (480px and down) */
+@media (max-width: 480px) {
+    .contactUs {
+        padding: 80px 15px 40px;
+    }
+    
+    .largeText {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .message p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    .message {
+        padding: 0 10px;
+    }
+    
+    .abt {
+        top: 15px;
+        left: 15px;
+    }
+    
+    .abt a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Phones (360px and down) */
+@media (max-width: 360px) {
+    .contactUs {
+        padding: 70px 10px 30px;
+    }
+    
+    .largeText {
+        font-size: 1.6rem;
+    }
+    
+    .message p {
+        font-size: 0.9rem;
+    }
+    
+    .abt {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/* Landscape Mobile Fix */
+@media (max-height: 600px) and (orientation: landscape) {
+    .contactUs {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 20px 40px;
+    }
+    
+    .largeText {
+        font-size: 1.8rem;
+    }
+    
+    .message p {
+        font-size: 1rem;
+    }
+}
+
+
+.enrollment-section {
+    padding: 80px 0;
+    background: #000000;
+    color: #ffffff;
+}
+
+.enrollment-container {
+    display: flex;
+    height: 100vh;
+}
+
+.enrollment-photo {
+    flex: 1;
+    min-width: 50%; 
+}
+
+.enrollment-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.enrollment-form {
+    flex: 1; 
+    min-width: 50%;
+    padding: 60px;
+    background: #000000;
+    overflow-y: auto;
+}
+
+
+
+/* Form Side */
+.enrollment-form h2 {
+    color: #ff6b6b;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #ff6b6b;
+}
+
+/* Radio Group Styles */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.radio-option:hover {
+    background: #222222;
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: linear-gradient(135deg, #ff6b6b, #ff0000);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+/* Office & Location Section */
+.office-section {
+    padding: 80px 0;
+    background: #111111;
+    color: #ffffff;
+}
+
+.office-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.map-container h2,
+.office-details h2 {
+    color: #ff6b6b;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.map-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.office-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item h3 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Instagram Section */
+.instagram-section {
+    padding: 80px 0;
+    background: #000000;
+    color: #ffffff;
+}
+
+.instagram-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.instagram-header h2 {
+    color: #ff6b6b;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.instagram-header p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.instagram-follow-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease;
+}
+
+.instagram-follow-btn:hover {
+    transform: translateY(-3px);
+}
+
+.instagram-feed {
+    background: #111111;
+    padding: 40px;
+    border-radius: 15px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-placeholder {
+    color: #666666;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .office-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .instagram-header h2 {
+        font-size: 2rem;
+    }
+}
+/* Responsive Design */
+
+/* Enrollment Section */
+.enrollment-section {
+    background: #000000;
+    margin-top: 40px;
+}
+
+.enrollment-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.enrollment-photo {
+    height: 100%;
+}
+
+.enrollment-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.enrollment-form {
+    padding: 60px;
+    background: #000000;
+    height: 100%;
+    overflow-y: auto;
+    display: block;
+    flex-direction: column;
+
+}
+
+.enrollment-form h2 {
+    color: #ff6b6b;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.form-subtitle {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #ff6b6b;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.radio-option:hover {
+    background: #222222;
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #ff6b6b, #ff0000);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Office & Location Section */
+.office-section {
+    padding: 80px 20px;
+    background: #111111;
+    color: #ffffff;
+}
+
+.office-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.map-container h2,
+.office-details h2 {
+    color: #ff6b6b;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.map-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.office-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item h3 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/*RESPONSIVE DESIGN*/
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+    /* Enrollment Section */
+    .enrollment-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 0;
+    }
+    
+    .enrollment-photo {
+        height: 400px;
+    }
+    
+    .enrollment-photo img {
+        height: 100%;
+    }
+    
+    .enrollment-form {
+        padding: 40px 30px;
+        height: auto;
+    }
+    
+    .enrollment-form h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .form-subtitle {
+        text-align: center;
+    }
+    
+    /* Office Section */
+    .office-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .map-container h2,
+    .office-details h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .office-info {
+        gap: 25px;
+    }
+    
+    .info-item {
+        text-align: center;
+    }
+    
+}
+
+/* Mobile Phones*/
+@media (max-width: 480px) {
+
+    /* Enrollment Section */
+    .enrollment-photo {
+        height: 300px;
+    }
+    
+    .enrollment-form {
+        padding: 30px 20px;
+    }
+    
+    .enrollment-form h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    /* Office */
+    .office-section {
+        padding: 60px 15px;
+    }
+    
+    .map-container h2,
+    .office-details h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .info-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .info-item p {
+        font-size: 0.9rem;
+    }
+    
+}
+
+/* Small Mobile Phones */
+@media (max-width: 360px) {
+    .enrollment-form {
+        padding: 25px 15px;
+    }
+    
+    .enrollment-form h2 {
+        font-size: 1.6rem;
+    }
+    
+    .office-section,
+    .instagram-section {
+        padding: 50px 10px;
+    }
+    
+    .map-container h2,
+    .office-details h2 {
+        font-size: 1.4rem;
+    }
+    
+    .info-item h3 {
+        font-size: 1rem;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .contactUs {
+        background-attachment: scroll;
+    }
 }
