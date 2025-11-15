@@ -1210,13 +1210,56 @@ body.menu-open {
     }
     
     .trainers {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
+        display: flex;
+        grid-template-columns: none; 
+        gap: 1.5rem;
         padding: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 1rem;
+        -webkit-overflow-scrolling: touch; 
+        scrollbar-width: thin; 
+        scrollbar-color: var(--primary-red) transparent;
+    }
+
+    .trainers::-webkit-scrollbar {
+        height: 6px;
     }
     
-    .trainerImg {
-        height: 300px;
+    .trainers::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+    }
+    
+    .trainers::-webkit-scrollbar-thumb {
+        background: var(--primary-red);
+        border-radius: 10px;
+    }
+    
+    .trainers::-webkit-scrollbar-thumb:hover {
+        background: #ff0000;
+    }
+    
+    .trainer {
+        flex: 0 0 auto; 
+        width: 280px; 
+        scroll-snap-align: start;
+        margin-right: 0;
+    }
+    
+    .trainer:hover {
+        transform: none; 
+    }
+    
+    .trainer:hover .trainerImg {
+        transform: none; 
+    }
+    
+    
+    .trainers::after {
+        content: '';
+        flex: 0 0 1rem;
     }
     
     .about-stats {
@@ -1244,6 +1287,25 @@ body.menu-open {
     
     .cta-transform h3 {
         font-size: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .ourTrainers {
+        padding: 3rem 1rem;
+    }
+    
+    .trainers {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .trainer {
+        width: 260px; 
+        padding: 1.5rem;
+    }
+    
+    .trainerImg {
+        height: 300px; 
     }
 }
 /* Gym Gallery Section */
@@ -1376,128 +1438,6 @@ body.menu-open {
     background: var(--white);
     color: var(--primary-red);
     transform: translateY(-2px);
-}
-
-/* Virtual Tour CTA */
-.virtual-tour-cta {
-    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
-    padding: 4rem 2rem;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.virtual-tour-cta h3 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    font-family: 'Anton', sans-serif;
-    text-transform: uppercase;
-}
-
-.virtual-tour-cta p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-/* Lightbox */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
-
-.lightbox-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-    background: var(--dark-bg);
-    border-radius: 15px;
-    overflow: hidden;
-    border: 3px solid var(--primary-red);
-}
-
-.close-lightbox {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    color: var(--white);
-    font-size: 2.5rem;
-    cursor: pointer;
-    z-index: 1001;
-    background: var(--primary-red);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-}
-
-.close-lightbox:hover {
-    transform: scale(1.1);
-    background: var(--dark-red);
-}
-
-#lightbox-img {
-    width: 100%;
-    max-height: 70vh;
-    object-fit: contain;
-}.lightbox-info {
-    padding: 2rem;
-    text-align: center;
-}
-
-.lightbox-info h3 {
-    color: var(--primary-red);
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-    font-family: 'Anton', sans-serif;
-    text-transform: uppercase;
-}
-
-.lightbox-info p {
-    color: var(--gray);
-    font-size: 1.1rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-filter {
-        gap: 0.5rem;
-    }
-    
-    .filter-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.8rem;
-    }
-    
-    .virtual-tour-cta {
-        padding: 3rem 1rem;
-    }
-    
-    .virtual-tour-cta h3 {
-        font-size: 1.8rem;
-    }
-    
-    .lightbox-content {
-        max-width: 95%;
-        max-height: 95%;
-    }
 }
 
 @media (max-width: 480px) {
